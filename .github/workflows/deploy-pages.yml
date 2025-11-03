@@ -28,10 +28,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to main branch
+      - name: Deploy to gh-pages branch (safe - keeps main intact)
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main
+          branch: gh-pages
           folder: dist
           clean: true
           commit_message: Deploy from GitHub Actions [skip ci]
